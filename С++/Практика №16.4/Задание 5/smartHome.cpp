@@ -22,46 +22,69 @@ int main()
 		std::string data, movements;
 		do
 		{
-			std::cout << "Day - " << day << " hour - " << (((hour <= 9) ? "0" + std::to_string(hour) : std::to_string(hour)) + ":00") << ". Input  temperature outside, temperature inside, movement outside: ";
+			std::cout << "Day - " << day << " hour - " << (((hour <= 9) ? "0" + std::to_string(hour) : std::to_string(hour)) + ":00") << ". Input temperature outside, temperature inside, movement outside: ";
 			getline(std::cin, data);
 			std::stringstream info(data);
 			info >> temperatureOutside >> temperatureInside >> movements;
 		} while (movements != "no" && movements != "yes");
 		std::cout << day << " " << hour << " " << temperatureOutside << " " << temperatureInside << " " << movements << std::endl;
-		
-		if (temperatureOutside < 0 || temperatureOutside < 5)
+
+		if (!(switches_state & WATER_PIPE_HEATING) && temperatureOutside < 0)
+		{
 			switches_state |= WATER_PIPE_HEATING;
-		else
+			std::cout << "The water pipe heating is on\n";
+		}
+		else if ((switches_state & WATER_PIPE_HEATING) && temperatureOutside > 5)
+		{
 			switches_state &= ~WATER_PIPE_HEATING;
-		std::cout << "The water pipe heating is " << ((switches_state & WATER_PIPE_HEATING) ? "on\n" : "off\n");
-		
-		if (movements == "yes" && (hour < 5 || hour > 16))
+			std::cout << "The water pipe heating is off\n";
+		}
+
+		if (!(switches_state & LIGHTS_OUTSIDE) && movements == "yes" && (hour < 5 || hour > 16))
+		{
 			switches_state |= LIGHTS_OUTSIDE;
-		else
+			std::cout << "The light outside is on\n";
+		}
+		else if ((switches_state & LIGHTS_OUTSIDE) && movements != "yes" && (hour >= 5 || hour <= 16))
+		{
 			switches_state &= ~LIGHTS_OUTSIDE;
-		std::cout << "The light outside is " << ((switches_state & LIGHTS_OUTSIDE) ? "on\n" : "off\n");
-		
-		if (temperatureOutside < 22 || temperatureOutside < 25)
+			std::cout << "The light outside is off\n";
+		}
+
+		if (!(switches_state & HEATERS) && temperatureOutside < 22)
+		{
 			switches_state |= HEATERS;
-		else
+			std::cout << "The heaters is on\n";
+		}
+		else if ((switches_state & HEATERS) && temperatureOutside > 25)
+		{
 			switches_state &= ~HEATERS;
-		std::cout << "The heaters is " << ((switches_state & HEATERS) ? "on\n" : "off\n");
-		
-		if (temperatureInside >= 30 || (temperatureInside > 25))
+			std::cout << "The heaters is off\n";
+		}
+
+		if (!(switches_state & CONDITIONER) && temperatureInside >= 30)
+		{
 			switches_state |= CONDITIONER;
-		else
+			std::cout << "The conditioner is on\n";
+		}
+		else if ((switches_state & CONDITIONER) && temperatureInside <= 25)
+		{
 			switches_state &= ~CONDITIONER;
-		std::cout << "The conditioner is " << ((switches_state & CONDITIONER) ? "on\n" : "off\n");
-		
-		if ((hour <= 20 && hour >= 16))
+			std::cout << "The conditioner is off\n";
+		}
+
+		if (hour <= 20 && hour >= 16)
 		{
 			switches_state |= LIGHTS_INSIDE;
 			colorTemperature -= (hour == 16) ? 0 : 575;
+			std::cout << "The light inside is on, color temperature = " << colorTemperature << std::endl;
 		}
-		else
+		else if ((switches_state & LIGHTS_INSIDE) && (hour > 20 && hour < 16))
+		{
 			switches_state &= ~LIGHTS_INSIDE;
+			std::cout << "The light inside is off" << std::endl;
+		}
 		colorTemperature = (hour == 0) ? 5000 : colorTemperature;
-		std::cout << "The light inside is " << ((switches_state & LIGHTS_INSIDE) ? "on " : "off ") << colorTemperature << std::endl;
 	}
 
 	return 0;
