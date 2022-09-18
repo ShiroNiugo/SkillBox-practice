@@ -3,21 +3,18 @@
 
 bool substr(char *first, char *second)
 {
-	int i = 0, j = 0, count = 0;
+	int i = 0, j = 0, size = strlen(second);
 
 	while (*(second + i) != '\0')
 	{
 		if (*(second + i) == *(first + j))
-		{
-			count++;
 			i++;
-		}
 		if (*(first + j) != '\0')
 			j++;
 		else
 			break;
 	}
-	return (i == count && count != 0 ? 1 : 0);
+	return (i == size && i != 0 ? 1 : 0);
 }
 
 int main()
