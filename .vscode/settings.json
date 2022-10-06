@@ -75,6 +75,8 @@
     "streambuf": "cpp",
     "typeinfo": "cpp",
     "cstring": "cpp",
-    "fstream": "cpp"
+    "fstream": "cpp",
+    "ctime": "cpp",
+    "map": "cpp"
   }
 }
