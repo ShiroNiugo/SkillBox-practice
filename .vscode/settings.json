@@ -77,6 +77,8 @@
     "cstring": "cpp",
     "fstream": "cpp",
     "ctime": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "iomanip": "cpp",
+    "list": "cpp"
   }
 }
