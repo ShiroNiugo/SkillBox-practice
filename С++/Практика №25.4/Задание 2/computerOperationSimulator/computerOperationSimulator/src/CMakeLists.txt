@@ -3,7 +3,7 @@
 #
 cmake_minimum_required (VERSION 3.8)
 
-project ("simulator of operations" VERSION 1)
+project ("computerOperationSimulator")
 
 # Include sub-projects.
-add_subdirectory (src)
+add_subdirectory ("computerOperationSimulator")
