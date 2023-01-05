@@ -30,9 +30,9 @@ public:
 
 	void setName(std::string branch = "")
 	{
-		for (int i = 0; i < (int)children.size(); i++)
+		for (size_t i = 0; i < children.size(); i++)
 		{
-			printf((branch == "big" ? "-big branch %i" : "--middle branch %i"), (i + 1));
+			printf((branch == "big" ? "-big branch %i" : "--middle branch %i"), ((int)i + 1));
 			std::cout << " input elf name: ";
 			std::cin >> children[i]->home;
 			children[i]->setName();
@@ -50,7 +50,7 @@ int main()
 {
 	std::srand(std::time(nullptr));
 	std::vector<Branch*> trees;
-	for (int i = 0; i < 1; i++)
+	for (int i = 0; i < 5; i++)
 	{
 		printf("Tree %i\n", (i + 1));
 		trees.push_back(new Branch(nullptr, "big"));
