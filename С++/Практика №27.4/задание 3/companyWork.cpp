@@ -19,15 +19,6 @@ class Team
 
 public:
 
-	/*void getWorkers()
-	{
-		for (auto w : workers){
-			printf("%s\n", w->worker->name.c_str());
-			if (!w->workers.empty())
-				w->getWorkers();
-		}
-	}*/
-
 	int getTeamWorkers(int count = 0)
 	{
 		for(auto w : workers){
