@@ -65,7 +65,7 @@ public:
 	BoundingBoxDimensions dimensions() override
 	{
 		double radius = lengthA * lengthB * lengthC / (4 * square());
-		BoundingBoxDimensions temp(radius*2,radius*2);
+		BoundingBoxDimensions temp(radius*2, radius*2);
 		return temp;
 	}
 	std::string type() override { return "Triangle";}

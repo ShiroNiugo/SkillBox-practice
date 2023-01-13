@@ -72,6 +72,5 @@ int main()
 	dog1.setCount();
 	dog1.setDance();
 	dog1.showTalents();
-	delete &dog1;
 	return 0;
 }
