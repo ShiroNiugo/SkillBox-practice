@@ -79,6 +79,12 @@
     "ctime": "cpp",
     "map": "cpp",
     "iomanip": "cpp",
-    "list": "cpp"
+    "list": "cpp",
+    "condition_variable": "cpp",
+    "ratio": "cpp",
+    "mutex": "cpp",
+    "semaphore": "cpp",
+    "stop_token": "cpp",
+    "thread": "cpp"
   }
 }

@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/Игроделика/Учеба в SkillBox/С++/Практика №24.5/Задание 3",
-      "program": "d:/Игроделика/Учеба в SkillBox/С++/Практика №24.5/Задание 3/build/Debug/outDebug",
+      "cwd": "d:/Игроделика/Учеба в SkillBox/С++/Практика №29.4/Задание2",
+      "program": "d:/Игроделика/Учеба в SkillBox/С++/Практика №29.4/Задание2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
