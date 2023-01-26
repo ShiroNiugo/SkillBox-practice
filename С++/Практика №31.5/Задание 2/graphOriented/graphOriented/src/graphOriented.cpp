@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <vector>
 #include <string>
+#include <memory>
 
 #include "../IGraph.h"
 #include "../ListGraph.h"
