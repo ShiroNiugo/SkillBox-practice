@@ -14,7 +14,7 @@ int main()
 		{"script author", {{"Jon Spaihts"},{"Denis Villeneuve"},{"Eric Roth"}}},
 		{"director", "Denis Villeneuve"},
 		{"producer", {{"Denis Villeneuve"},{"Mary Parent"},{"Cale Boyter"},{"Joe Caracciolo Jr."}}},
-		{"roles:", {
+		{"roles", {
 					{"Paul Atreides", "Timothée Chalamet"},
 					{"Chani", "Zendaya"},
 					{"Lady Jessica Atreides", "Rebecca Ferguson"},

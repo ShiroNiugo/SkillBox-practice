@@ -16,7 +16,7 @@ void searchActors(json src, std::string name, std::vector<std::string> arr, std:
 		else {
 			std::string n = (value.is_string()) ? value : "";
 			if (n.find(name) != std::string::npos)
-				arr.push_back(key);//std::cout << film << key << std::endl;
+				arr.push_back(key);
 		}
 	}
 	if(!arr.empty())
