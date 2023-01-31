@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+message Info{
+	required int32 age = 1;
+	required string address = 2;
+	required string name = 3;
+	optional string activity = 4;
+	optional bool foreignEconomicActivity = 5;
+}
