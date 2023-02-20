@@ -8,12 +8,12 @@ auto task2 = [](std::vector<int> vec){
         return std::unique_ptr<std::vector<int>>{};
 
     std::unordered_set<int> find;
-    std::vector<int> temp;
     for(auto digit : vec)
         find.insert(digit);
+    vec.clear();
     for(auto digit : find)
-        temp.push_back(digit);
-    std::unique_ptr<std::vector<int>> result = std::make_unique<std::vector<int>>(temp);
+        vec.push_back(digit);
+    std::unique_ptr<std::vector<int>> result = std::make_unique<std::vector<int>>(vec);
     return result;
 };
 
