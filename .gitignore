@@ -423,6 +423,7 @@
 /PathEngC++/Practice 37.4/Task1/Calc/out/build/Mingw64-Debug
 /PathEngC++/Practice 37.4/Task1/Calc/.vs
 /PathEngC++/Practice 37.4/Task3/CMakeProject1/out/build/Mingw64-Debug
+<<<<<<< HEAD
 PathEngC++/Practice 38.5/Task 1/clickSound/build-clickSound-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/.ninja_deps
 PathEngC++/Practice 38.5/Task 1/clickSound/build-clickSound-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/.ninja_log
 PathEngC++/Practice 38.5/Task 1/clickSound/build-clickSound-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/build.ninja
@@ -567,3 +568,6 @@ PathEngC++/Practice 38.5/Task 3/blurImage/build-blurImage-Desktop_Qt_5_15_2_MinG
 PathEngC++/Practice 38.5/Task 3/blurImage/build-blurImage-Desktop_Qt_5_15_2_MinGW_64_bit-Debug/blurImage_autogen/include/ui_formBlur.h
 PathEngC++/Practice 38.5/Task 3/blurImage/image/hqdefault.jpg
 PathEngC++/Practice 38.5/Task 3/blurImage/image/Owls_Birds_Glance_537043_2485x1920.jpg
+=======
+.vs/Учеба в SkillBox/v17/.wsuo
+>>>>>>> 7d983b5 (fix)

@@ -1,4 +1,4 @@
-#include <iostream>
+ #include <iostream>
 #include <vector>
 #include <unordered_set>
 #include <memory>
@@ -11,8 +11,7 @@ auto task2 = [](std::vector<int> vec){
     for(auto digit : vec)
         find.insert(digit);
     vec.clear();
-    for(auto digit : find)
-        vec.push_back(digit);
+    vec.assign(find.begin(), find.end());
     std::unique_ptr<std::vector<int>> result = std::make_unique<std::vector<int>>(vec);
     return result;
 };
